@@ -1,42 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../models/user';
+import { ApiResponse } from '../models/user'; // Import ApiResponse
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+const baseUrl = 'http://127.0.0.1:8000/api/getkaryawan';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class TutorialService {
+export class UserService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getAll(): Observable<User[]> {
-    return this.http.get<User[]>(baseUrl);
+  getAll(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(baseUrl);
   }
-
-  // get(id: any): Observable<Tutorial> {
-  //   return this.http.get<Tutorial>(`${baseUrl}/${id}`);
-  // }
-
-  // create(data: any): Observable<any> {
-  //   return this.http.post(baseUrl, data);
-  // }
-
-  // update(id: any, data: any): Observable<any> {
-  //   return this.http.put(`${baseUrl}/${id}`, data);
-  // }
-
-  // delete(id: any): Observable<any> {
-  //   return this.http.delete(`${baseUrl}/${id}`);
-  // }
-
-  // deleteAll(): Observable<any> {
-  //   return this.http.delete(baseUrl);
-  // }
-
-  // findByTitle(title: any): Observable<Tutorial[]> {
-  //   return this.http.get<Tutorial[]>(`${baseUrl}?title=${title}`);
-  // }
 }

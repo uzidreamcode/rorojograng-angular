@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 //http client
 import { HttpClientModule } from '@angular/common/http';
 import { UserAddComponent } from './user-add/user-add.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UserAddComponent } from './user-add/user-add.component';
     AppComponent,
     ComponentComponent,
     AboutComponent,
-    UserAddComponent
+    UserAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

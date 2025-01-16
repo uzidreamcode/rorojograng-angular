@@ -1,1 +1,21 @@
 <p>user-add works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Address</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.Karyawan.nama }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.Karyawan.alamat }}</td>
+      <td>{{ user.Karyawan.no_telp }}</td>
+    </tr>
+  </tbody>
+</table>
