@@ -63,4 +63,17 @@ export class UserAddComponent implements OnInit {
   editUser(userId: number): void {
     this.router.navigate(['/edit', userId]);
   }
+
+  deleteUser(userId: number): void {
+    this.userService.deleteUser(userId).subscribe({
+      next: (response) => {
+        console.log('User deleted successfully', response);
+        this.refreshList();
+      },
+      error: (error) => {
+        console.error('Error deleting user', error);
+        alert('Error deleting user: ' + error.error.message);
+      }
+    });
+  }
 }
