@@ -1,1 +1,9 @@
-<p>component works!</p>
+<p>component works! {{name}} </p>
+<input [(ngModel)]="name" type="text">
+<img [src]="imgUrl" alt="Angular logo">
+
+<form [formGroup]="form" (ngSubmit)="onsubmit()">
+  <input formControlName="name" type="text">
+  <input formControlName="email" type="email">
+  <button type="submit">Submit</button>
+</form>
