@@ -7,6 +7,7 @@
       <th>Role</th>
       <th>Address</th>
       <th>Phone</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,9 @@
       <td>{{ user.role }}</td>
       <td>{{ user.Karyawan.alamat }}</td>
       <td>{{ user.Karyawan.no_telp }}</td>
+      <td>
+        <button (click)="editUser(user.id_karyawan)">Edit</button>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -23,7 +27,6 @@
   <h3>User Details</h3>
   <p><strong>Email:</strong> {{ currentUser.email }}</p>
   <p><strong>Role:</strong> {{ currentUser.role }}</p>
-
 </div>
 
 <div *ngIf="totalPages > 1">

@@ -1,0 +1,5 @@
+/* Ensure that the button is not overlapped by other elements */
+button[type="submit"] {
+    z-index: 1;
+    position: relative;
+  }

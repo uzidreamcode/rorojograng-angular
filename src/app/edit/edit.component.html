@@ -1,0 +1,28 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nama">Name:</label>
+      <input id="nama" formControlName="nama" type="text">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password">
+    </div>
+    <div>
+      <label for="alamat">Address:</label>
+      <input id="alamat" formControlName="alamat" type="text">
+    </div>
+    <div>
+      <label for="no_telp">Phone:</label>
+      <input id="no_telp" formControlName="no_telp" type="text">
+    </div>
+    
+    <div>
+      <label for="role">Role:</label>
+      <input id="role" formControlName="role" type="text">
+    </div>
+    <button type="submit">Update</button>
+  </form>

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserAddComponent } from './user-add/user-add.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RegisterComponent } from './register/register.component';
     AboutComponent,
     UserAddComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
